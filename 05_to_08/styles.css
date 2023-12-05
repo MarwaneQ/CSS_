@@ -1,4 +1,4 @@
-div {
+.assign-1-shape-1 , .assign-1-shape-2, .assign-1-shape-3 {
     width: 500px;
     position: center;
     margin: 10px auto;
@@ -13,4 +13,89 @@ div {
 
 .assign-1-shape-3{
     background-color: rgba(138, 43, 226, 10%);
+}
+/* 2 */
+.assign-2-shape-1, .assign-2-shape-2, .assign-2-shape-3, .assign-2-shape-4{
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+    background-image: url(css-assignment-5-8.png);
+    margin: 60px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.assign-2-shape-1{
+    background-repeat: no-repeat;
+}
+
+
+.assign-2-shape-2{
+    background-repeat: repeat-y;
+}
+
+
+.assign-2-shape-3{
+    background-repeat: repeat-x;        
+}
+
+.assign-2-shape-4{
+    background-repeat: repeat;
+}
+/* 3 */
+.assign-3-shape-1, .assign-3-shape-2, .assign-3-shape-3, .assign-3-shape-4 {
+    width: 400px;
+    height: 400px;
+    background-image: url(css-assignment-5-8.png);
+    margin: 60px;
+    padding: 10px;
+    background-color: #eee;
+    display: inline-block;
+}
+.assign-3-shape-1{
+    background-repeat: no-repeat;
+}
+
+
+.assign-3-shape-2{
+    background-repeat: repeat-y;
+    background-position: right;
+}
+
+
+.assign-3-shape-3{
+    background-repeat: repeat-x; 
+    background-position: bottom;       
+}
+
+.assign-3-shape-4{
+    background-repeat: repeat;
+}
+/* 4 */
+.assign-4-shape-1, .assign-4-shape-2, .assign-4-shape-3, .assign-4-shape-4 {
+    width: 400px;
+    height: 400px;
+    background-image: url(css-assignment-5-8.png);
+    margin: 60px;
+    padding: 10px;
+    display: inline-block;
+    background-color: #eee;
+}
+.assign-4-shape-1 {
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.assign-4-shape-2 {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80% 100%;
+}
+.assign-4-shape-3 {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 80%;
+}
+.assign-4-shape-4 {
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
