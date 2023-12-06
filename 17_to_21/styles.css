@@ -14,7 +14,9 @@ body {
     text-shadow: 0.5px 0.5px  rgb(237,66,52) , 1px 1px  rgb(38,148,240) , 1.5px 1.5px  rgb(154,40,177);
 }
 /* 2 */
-.one, .two, .three {
+.one,
+.two,
+.three {
     text-align: center;
 }
 .one {
@@ -27,7 +29,9 @@ body {
     text-transform: lowercase;
 }
 /* 3 */
-.p1, .p2, .p3 {
+.p1,
+.p2,
+.p3 {
     width: 400px;
     background-color: #eee;
     padding: 10px;

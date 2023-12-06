@@ -1,0 +1,77 @@
+/* 
+    * CSS Units
+    - px
+    - em => Time
+    - rem => Root Time
+    - vw
+    - percentage 
+
+    * Read
+    - vmin
+    - vh
+
+    1em = 16px XXX WRONG
+
+    Default Font Size For Web Page Is 16px
+
+    1em = same font size as the parent element .
+
+
+
+*/
+
+:root {
+    font-size: 20px;
+}
+div {
+    width: 400px;
+    
+}
+div ,
+p { 
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+p {
+    background-color: #eee;
+}
+.d1 {
+    border: 1px solid rgb(255,87,34);
+}
+.d1 .p1 {
+    border: 1px solid; 
+    border-color: inherit;
+}
+.d2{
+    border: 1px solid rgb(69,179,229);
+}
+.d2 .p2 {
+    border: 1px solid;
+    border-color: inherit;
+}
+/* 2 */
+.one {
+    font-family: 'Open Sans', sans-serif;
+}
+.two {
+    font-family: 'Cairo', sans-serif;
+}
+.three {
+    font-family: 'Jomhuria', serif;
+}
+/* 3 */
+.one1,
+.two2,
+.three3 {
+    font-family: sans-serif;
+}
+.one1 {
+    font-size: 2.5rem;
+}
+.two2 {
+    font-size: 2rem;
+}
+.three3 {
+    font-size: 1.5rem;
+}
