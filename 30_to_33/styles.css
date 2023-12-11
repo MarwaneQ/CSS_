@@ -118,3 +118,44 @@
     list-style-position: inside;
 }
 /* 4 */
+table {
+    width: 700px;
+    margin: 20px auto;
+}
+table caption {
+    margin: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+table thead td{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(64,64,64);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-spacing: 1px;
+}
+tbody td {
+    background-color: #eee;
+    padding: 5px;
+    text-align: center;
+    border-spacing: 1px;
+}
+.view {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-style: none;
+    margin: 10px;
+}
+.delete {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-style: none;
+}
