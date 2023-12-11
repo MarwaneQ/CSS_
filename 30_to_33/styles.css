@@ -7,7 +7,6 @@
     - Sticky
 
 */
-
 .black,
 .blue,
 .green,
@@ -47,6 +46,7 @@
     background-color: #eee;
     padding: 30px;
     position: relative;
+    top: 70px;
     text-align: center;
     border-left: 2px solid rgb(34,150,243);
     border-right: 2px solid rgb(34,150,243);
@@ -89,3 +89,32 @@
     padding: 2px 5px;
     border-left: 2px solid red;
 }
+/* 3 */
+.all-liste {
+    display: block;
+    width: 400px;
+    margin: 20px auto;
+    list-style: none;
+    background-color: #eee;
+    padding: 10px ;
+    padding-bottom: 0;
+}
+.liste-1,
+.liste-2,
+.liste-3 {
+    padding: 20px;
+}
+.li-1,
+.li-2,
+.li-3 {
+    margin: 5px;
+    padding: 10px;
+    background-color: aliceblue;
+}
+.liste-2 {
+    list-style-type: upper-roman;
+}
+.liste-3 {
+    list-style-position: inside;
+}
+/* 4 */
