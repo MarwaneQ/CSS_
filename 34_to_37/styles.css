@@ -34,7 +34,7 @@
 
 }
 /* 3 */
-p {
+.first {
     position: relative;
     background-color: #eee;
     width: 350px;
@@ -43,7 +43,7 @@ p {
     padding: 10px;
     border-left: 5px solid red;
 }
-p::after {
+.first::after {
     content: "";
     width: 0px;
     height: 0px;
@@ -55,11 +55,43 @@ p::after {
     left: -6%;
     top: 25%;
 }
-p::before {
+.first::before {
     content: attr(data-person);
     position: absolute;
     width: 50px;
     background-color: #eee;
-    left: -20%;
-    
+    left: -22%;
+    text-align: center;
+    padding: 7px;
+    margin: 5px auto;
+    top: -1px;
+}
+/* 4 */
+.last {
+    position: relative;
+    width: 300px;
+    background-color: #eee;
+    margin: 10px auto;
+    padding: 10px;
+}
+.last::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-right: 5px solid red;
+}
+.last::before {
+    content: attr(number);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    top: 0;
+    background-color: red;
+    color: white;
+    left: -12%;
 }
