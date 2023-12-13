@@ -73,6 +73,7 @@
     background-color: #eee;
     margin: 10px auto;
     padding: 10px;
+    counter-increment: numbers;
 }
 .last::after {
     content: "";
@@ -84,7 +85,7 @@
     border-right: 5px solid red;
 }
 .last::before {
-    content: attr(number);
+    content: counter(numbers);
     position: absolute;
     width: 40px;
     height: 40px;
