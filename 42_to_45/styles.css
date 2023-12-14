@@ -1,0 +1,95 @@
+/* 
+    The Box Model
+    Box Sizing
+*/
+/* 
+ALL THE ELEMENT
+* {
+    box-sizing: border-box;
+}
+ */
+/* 
+ TRANSITIONS 
+    /* transition-property: all;
+       transition-duration: 1s;
+       transition-delay: 0.5s;
+       transition-timing-function: ease-in-out;*/
+    /* transition: all 1s 0.5 ease-in-out; */
+/* 
+    THE MARGIN COLLAPCE
+    [1] Only Verrtical Margin Collapce
+    [2] Bigger Margin Wins
+    [3] Margin Collapsing With Elements Without Anithyng Between 
+    [4] Nesting Does Not Prevent Collapsing 
+*/
+/* 
+    CSS Variables
+    - Global Variables
+    - Local Variables
+    :root{
+        --variable-name : value ;
+    }
+    To Use It :
+    var(--variable-name, Fallback value)
+    Fallnack value means when the variable is not detected or curapted it will use the color you put on the Fallback value 
+*/
+.one {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #eee;
+    padding: 20px;
+    height: 150px;
+    transition-duration: 0.5s;
+    transition-property: margin-top;
+    transition-timing-function: ease;
+}
+.one:hover{
+    margin-top: 10px;
+
+}
+.one .first {
+    padding-bottom: 20px;
+}
+.one .second {
+    background-color: aliceblue;
+    padding: 20px;
+    transition-duration: 1s;
+    transition-delay: 0.5;
+    transition-property: margin-top;
+    transition-timing-function: ease-in-out;
+}
+.one:hover .second {
+    margin-top: 20px;
+}
+/* 2 */
+.two {
+    width: 400px;
+    margin: 10px auto;
+    background-color: #eee !important;
+    color: black !important;
+    font-size: 20px !important;
+    border: none !important;
+    position: relative;
+    text-indent: -2000px;  
+}
+.two::after {
+    content: "Elzero";
+    position: absolute;
+    text-indent: 0;
+    left: 200px;
+}
+/* 3 */
+/* :root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+} */
+  
+.three {
+    width: 400px;
+    margin: 10px auto;
+    color: var(--mainColor, red);
+    padding: var(--mainPadding, 10px);
+    border: 2px solid ;
+    border-color: var(--mainColor, black);
+}
