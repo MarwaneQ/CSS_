@@ -217,9 +217,10 @@ li {
     width: calc(100%/5);
 }
 .main-area .content {
-    flex-grow: 1;
+    flex-grow: 2;
 }
 .footer {
+    /* height: 200px; */
     display: flex;
     justify-content: space-between;
     background-color: var(--background-color);

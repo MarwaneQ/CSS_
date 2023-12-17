@@ -1,0 +1,124 @@
+/* 
+        * Grid
+      - for Parent
+    - display: grid | inline-grid
+    - grid-template-columns => [Numebr Of  Columns In] => [px, %, auto, Fraction fr, Repeat(NumOfColumns, auto), Mix]
+    - grid-template-rows => [Number Of Row Hieght In] => [px, %, auto, Fraction fr, Repeat(NumOfRowHieght, auto), Mix]
+    - gap => row-gap + column-gap
+    - grid-template-areas:"name name" in the element => grid-area: name;
+      - for Child
+    - grid-column: startNum / endNum or span Num or startNum / span Num
+    - grid-row: The Same As grid-column
+    - grid-area: 
+    for responsive designe
+    - minmax()  
+    - auto-fill
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+.grid1 {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px auto;
+  gap: 15px;
+  position: relative;
+}
+.grid1 div {
+  display: flex;
+  text-align: center;
+  background-color: #607d8b;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+/* 2 */
+.layout {
+  display: grid;
+  position: relative;
+  width: 100vW;
+  height: 100vh;
+  margin: 0 auto;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas: "head head head head head head head head head head"
+  "main main main main main main main side side side"
+  "foot foot foot foot foot foot foot foot foot foot";
+}
+.layout header {
+  grid-area: head;
+  background-color: #02a9f4;
+}
+.layout header::before {
+  position: absolute;
+  content: "Header";
+  color: white;
+  top: 15px;
+  left: 20px;
+
+}
+.layout section {
+  grid-area: main;
+  background-color: #ff5723;
+}
+.layout section::before {
+  position: absolute;
+  content: "Section";
+  color: white;
+  top: 80px;
+  left: 20px;
+}
+.layout aside {
+  grid-area: side;
+  background-color: #607e8c;
+}
+.layout aside::before {
+  position: absolute;
+  content: "Aside";
+  color: white;
+  top: 80px;
+  right: 430px;
+}
+.layout footer {
+  grid-area: foot;
+  background-color: #019688;
+}
+.layout footer::before {
+  position: absolute;
+  content: "Footer";
+  color: white;
+  bottom: 20px;
+  left: 20px;
+}
+/* 3 */
+.grid2 {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto repeat(2,1fr) auto;
+  grid-template-rows: 1fr auto;
+  width: 800px;
+  height: 400px;
+  gap: 15px;
+}
+.grid2 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #403f3f;
+  
+}
+hr {
+  margin: 20px;
+}
