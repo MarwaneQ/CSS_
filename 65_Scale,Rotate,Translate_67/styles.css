@@ -1,0 +1,169 @@
+/* 
+        * 2D Transform
+     - Scale
+    transform: scale(scaleX,scaleY);
+     - Rotate
+     transform: rotate(45deg);
+    deg => degree
+    rad => radians
+    grad => gradians
+    turn => turns
+     - Tranlate
+     transform: translate(x,y);
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.assign1 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #eee;
+    font-size: 30px;
+    color: #02a9f4;
+}
+.assign1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #02a9f4;
+    transform: rotate(-10deg) translate(-2%,0);
+    -webkit-transform: rotate(-10deg) translate(-2%,0);
+    -moz-transform: rotate(-10deg) translate(-2%,0);
+    -ms-transform: rotate(-10deg) translate(-2%,0);
+    -o-transform: rotate(-10deg) translate(-2%,0);
+}
+.assign1::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: #e93463;
+    transform: rotate(8deg) translate(-2%,0);
+    -webkit-transform: rotate(8deg) translate(-2%,0);
+    -moz-transform: rotate(8deg) translate(-2%,0);
+    -ms-transform: rotate(8deg) translate(-2%,0);
+    -o-transform: rotate(8deg) translate(-2%,0);
+}
+hr {
+    margin: 20px;
+}
+/* 2 */
+.assign2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    margin: 30px auto;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.assign2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid;
+    border-color: #e93463 #e93463 #e93463 transparent;
+}
+.assign2::after {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid;
+    border-color: #02a9f4 transparent #02a9f4 #02a9f4;
+}
+/* 3 */
+.assign3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    margin: 30px auto;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.assign3::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid;
+    border-color: #e93463 #e93463 #e93463 transparent;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.assign3::after {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid;
+    border-color: #02a9f4 transparent #02a9f4 #02a9f4;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.assign3:hover::before{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+.assign3:hover::after{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
