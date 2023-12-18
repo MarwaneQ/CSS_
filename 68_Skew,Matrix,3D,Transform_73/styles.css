@@ -1,0 +1,199 @@
+/* 
+        * 2D Transform
+     - Skew
+    transform: skew(scaleX,scaleY);
+     - Matrix
+    Syntax => matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )
+        * 3D Tranform
+
+*/
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   /* font-family: Arial, Helvetica, sans-serif; */
+}
+a {
+
+}
+hr {
+   margin: 50px;
+}
+.one {
+   width: 150px;
+   margin: 40px auto;
+   background-color: #ff5723;
+   padding: 40px 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   position: relative;
+}
+.one::after,
+.one::before {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 100%;
+   background-color: #ff5723;
+   z-index: -10;
+   left: 0;
+   top: 0;
+}
+.one::before {
+   transform: skew(10deg, 10deg);
+   -webkit-transform: skew(10deg, 10deg);
+   -moz-transform: skew(10deg, 10deg);
+   -ms-transform: skew(10deg, 10deg);
+   -o-transform: skew(10deg, 10deg);
+}
+.one::after {
+   transform: skew(-10deg, -10deg);
+   -webkit-transform: skew(-10deg, -10deg);
+   -moz-transform: skew(-10deg, -10deg);
+   -ms-transform: skew(-10deg, -10deg);
+   -o-transform: skew(-10deg, -10deg);
+}
+/* 2 */
+.two {
+   display: flex;
+   position: relative;
+   width: 150px;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+   margin: 10px auto;
+   background-color: #019688;
+   color: white;
+}
+.two::before,
+.two::after {
+   position: absolute;
+   content: '';
+   background-color: #019688;
+   z-index: -1;
+}
+.two::before {
+   width: 100%;
+   height: 100%;
+   transform: translateX(-13px) skewX(15deg);
+   -webkit-transform: translateX(-13px) skewX(15deg);
+   -moz-transform: translateX(-13px) skewX(15deg);
+   -ms-transform: translateX(-13px) skewX(15deg);
+   -o-transform: translateX(-13px) skewX(15deg);
+}
+.two::after {
+   width: 12%;
+   height: 100%;
+   transform: translateX(-105px) skewX(15deg);
+   -webkit-transform: translateX(-105px) skewX(15deg);
+   -moz-transform: translateX(-105px) skewX(15deg);
+   -ms-transform: translateX(-105px) skewX(15deg);
+   -o-transform: translateX(-105px) skewX(15deg);
+}
+/* 3 */
+/* .class {
+       matrix(3, 0.2679, 0, 3, 20, 100);
+       scaleX           3
+       skewY            0.2679
+       skewX            0
+       scaleY           3
+       translateX       20
+       translateY       100
+} */
+/* 4 */
+.four {
+   display: flex;
+   background-color: #607e8c;
+   width: 200px;
+   height: 200px;
+   position: relative;
+   margin: 0 auto;
+   margin-top: 150px;
+   border-bottom: 5px solid black;
+   align-items: flex-end;
+}
+.four::before {
+   position: absolute;
+   content: "";
+   width: 69%;
+   height: 69%;
+   top: -69px;
+   left: 29px;
+   background-color: black;
+   transform: rotate(44.5deg);
+   -webkit-transform: rotate(44.5deg);
+   -moz-transform: rotate(44.5deg);
+   -ms-transform: rotate(44.5deg);
+   -o-transform: rotate(44.5deg);
+   border-right: 5px solid white;
+   border-bottom: 5px solid white;
+}
+.four::after {
+   position: absolute;
+   content: "Elzero";
+   color: white;
+   bottom: 5px;
+   left: 10px;
+}
+/* 5 */
+.five {
+   display: flex;
+   position: relative;
+   width: 200px;
+   height: 200px;
+   margin: 20px auto;
+   
+   transform-style: preserve-3d;
+   transition: 1s;
+   -webkit-transition: 1s;
+   -moz-transition: 1s;
+   -ms-transition: 1s;
+   -o-transition: 1s;
+}
+.box {
+   perspective: 600px;
+}
+.five::before {
+   display: flex;
+   position: absolute;
+   content: "Front";
+   width: 100%;
+   height: 100%;
+   background-color: #fa3664;
+   top: 0;
+   align-items: center;
+   justify-content: center;
+   font-size: 30px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.five::after {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   content: "Back";
+   width: 100%;
+   height: 100%;
+   top: 0;
+   background-color: #1693fd;
+   font-size: 30px;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   transform: rotateY(180deg);
+   -webkit-transform: rotateY(180deg);
+   -moz-transform: rotateY(180deg);
+   -ms-transform: rotateY(180deg);
+   -o-transform: rotateY(180deg);
+}
+.five:hover {
+   transform: rotateY(180deg);
+   -webkit-transform: rotateY(180deg);
+   -moz-transform: rotateY(180deg);
+   -ms-transform: rotateY(180deg);
+   -o-transform: rotateY(180deg);
+}
