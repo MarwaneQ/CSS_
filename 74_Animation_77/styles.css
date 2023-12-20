@@ -1,0 +1,262 @@
+/* 
+      * Animation
+    - KeyFrames
+    - Animation-name
+    - Animation-duration
+    - Animation-timing-function 
+    - Animation-iteration-count
+    - Animation-direction: reverse
+    - Animation-delay
+    - Animation-fill-mode: forward (takes the style of the last keyframe)
+    - Animation-play-state: paused
+*/ 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+hr {
+    margin: 50px;
+}
+.assign1 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    border-color: #df3055 #df3055 #df3055 transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.assign1::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    top: -65px;
+    left: -15px;
+    width: 60px;
+    height: 60px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    border-color: #2390ff transparent #2390ff #2390ff;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.assign1::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    top: -75px;
+    left: -25px;
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-color: #fca203 #fca203 transparent #fca203;
+}
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.assign1:hover,.assign1:hover::after,.assign1:hover::before {
+    animation-play-state: paused;
+}
+/* 2 */
+.assign2 {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    border-color: #2390ff #2390ff #2390ff transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+.assign2::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    top: -65px;
+    left: -15px;
+    width: 60px;
+    height: 60px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    border-color: #fca203 #fca203 transparent #fca203;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+.assign2::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "";
+    top: -75px;
+    left: -25px;
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    border-color: transparent black black black;
+}
+.assign2:hover,.assign2:hover::after,.assign2:hover::before {
+    animation-play-state: running;
+}
+/* 3 */
+.assign3 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 5px solid;
+    border-color: black black black transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/* 4 */
+.assign4 {
+    margin: 20px auto;
+    width: 670px;
+    height: 525px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px) 35px repeat(4, 75px);
+    grid-template-rows: repeat(7, 75px);
+}
+.assign4 .one {
+    position: relative;
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: black;
+}
+.assign4 .two {
+    grid-area: 1 / 1 / 8 / 2;
+    background-color: black;
+}
+.assign4 .three {
+    grid-area: 4 / 1 / 5 / 5;
+    background-color: black;
+}
+.assign4 .four {
+    grid-area: 7 / 1 / 8 / 5;
+    background-color: black;
+}
+.assign4 .five {
+    grid-area: 1 / 6 / 8 / 7;
+    background-color: black;
+}
+.assign4 .six {
+    position: relative;
+    grid-area: 7 / 6 / 8 / 10;
+    background-color: black;
+}
+.assign4 .one::before {
+    position: absolute;
+    content: "";
+    background-color: #fea607;
+    width: 65px;
+    height: 65px;
+    right: 5px;
+    top: 5px;
+    animation-name: move1;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+.assign4 .six::before{
+    position: absolute;
+    content: "";
+    background-color: #fea607;
+    width: 65px;
+    height: 65px;
+    right: 5px;
+    top: 5px;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+    animation-name: move2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move1 {
+    0%    {right: 5px; top: 5px; }
+    11.11%{right: 230px; top: 5px; }
+    22.22%{right: 230px; top: 230px;}
+    33.33%{right: 5px; top:230px}
+    44.44%{right: 230px; top: 230px;}
+    55.55%{right: 230px; top:455px;}
+    66.66%{right: 5px; top: 455px;}
+    77.77%{right: 230px; top:455px;}
+    88.88%{right: 230px; top: 5px;}
+}
+@keyframes move2 {
+    0%{top: 5px; right: 5px; opacity: 100%;}
+    50%{top: 5px; right: 230px; opacity: 100%;}
+    80%{opacity: 100%;}
+    100%{top: -445px; right: 230px; opacity: 0%;}
+
+}
