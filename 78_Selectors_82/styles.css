@@ -1,0 +1,107 @@
+/* 
+    * CSS Selectors
+    -------------
+    ----part1----
+    -------------
+    - * all element
+    - Element => [p, div, h2, ...]
+    - Element OtherElement => div p
+    - .class-name
+    - #id-name
+    - .parent .child
+    - .class-one.class-two
+    - .class-name div, .class-name p
+    - Element.class-name
+    - .parent > .child => Direct Child
+    -------------
+    ----part2----
+    -------------
+    - Element + OtherElement => [div + p]
+    - Elemenet ~ OtherElement => [p ~ div]
+    - [Attribute]
+    - Element[Attribute]
+    - [Attribute=Value]
+    - Element[Attribute=Value] => input[type="submit"]
+    - [Attribute~=Value] => Containes A Word [title~="Div"]
+    - [Attribute*=Value] => Containes A String [title*="Div"]
+    - [Attribute^=Value] => Start With A String [title^="A"]
+    -------------
+    ----part3----
+    -------------
+    - :first-child
+    - :last-child
+    - :first-of-type 
+    - :last-of-type
+    - :only-child
+    - :only-of-type
+    -------------
+    ----part4----
+    -------------
+    - :not(Selector) => p:not(:first-child)
+    - :nth-child(n)
+    - :nth-child(even) => 2 4 6 ...
+    - :nth-child(odd) => 1 3 5 ...
+    - :nth-last-child()
+    - :nth-of-type(same as before)
+    - :nth-last-of-type()
+    -------------
+    ----part5----
+    -------------
+    - :root
+    - :checked
+    - :empty
+    - :disabled
+    - :required
+    - :focus
+    - ::selection
+    - ::placeholder
+*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight {
+    width: 600px;
+    margin: 0 auto;
+}
+.one > div.main.red {
+    color: red;
+}
+hr {
+    margin: 30px;
+}
+/* 2 */
+.two .child:nth-of-type(2) {
+    color: red;
+}
+/* 3 */
+.three .baby:only-child {
+    color: red;
+}
+/* 4 */
+.four > div[title]:not(.no-need){
+    color: red;
+}
+/* 5 */
+.five > div:not(.no-need) div:not(.no-need)[title]:last-child {
+    color: red;
+}
+/* 6 */
+.six div:not(.no-need) > div:nth-last-of-type(2) {
+    color: red;
+}
+/* 7 */
+.seven div:first-child > div:nth-last-of-type(2) {
+    color: red;
+}
+/* 8 */
+.eight div :not(:first-child, h3, :last-child) {
+    color: red;
+}
