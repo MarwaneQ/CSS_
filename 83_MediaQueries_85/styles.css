@@ -1,0 +1,124 @@
+/* 
+    Media Queries
+    Responsuve Design
+    - Concept Of Width
+    - Mobile
+    - Small Screens
+    - Medium Devices (Tablets)
+    - Large Devices (Desktops and Laptops)
+    - Future Updates
+    
+    - Mobile First
+    - Test Devices
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 1 */
+.assign-one {
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+}
+@media print {
+    .assign-one {
+        font-size: 40px;
+    }
+}
+/* 2 */
+.assign-two {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.assign-two div {
+    background-color: #eee;
+    width: 300px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+/* Small Screens */
+@media (min-width: 300px) and (max-width: 599px) {
+    .assign-two div {
+        width: calc(100%-10px);
+    }
+    .assign-two div h3 {
+        color: black;
+    }
+}
+/* Meduim Screens */
+@media (min-width: 600px) and (max-width: 799px) {
+    .assign-two div {
+        width: calc(50% - 10px);
+    }
+    .assign-two div h3 {
+        color: #ff0100;
+    }
+}
+/* Large Screen*/
+@media (min-width: 800px) {
+    .assign-two  div {
+        width: calc(25% - 10px);
+    }
+    .assign-two div h3 {
+        color: #009688;
+    }
+}
+
+/* 3 */
+.assign-three {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.assign-three div {
+    background-color: #eee;
+    width: 300px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Small Screens */
+@media (min-width: 300px) and (max-width: 599px) {
+    .assign-three div {
+        width: calc(100% - 10px);
+    }
+    .assign-three div h3 {
+        color: black;
+    }
+} 
+/* Meduim Screens */
+@media (min-width: 600px) and (max-width: 799px) {
+    .assign-three .one {
+        width: calc(100% - 10px);
+    }
+    .assign-three .two,
+    .assign-three .three,
+    .assign-three .four {
+        width: calc(98%/3);
+    }
+    .assign-three div h3 {
+        color: #ff0100;
+    }
+}
+/* Large Screen*/
+@media (min-width: 800px) {
+    .assign-three div h3 {
+        color: #009688;
+    }
+    .assign-three .one,
+    .assign-three .four {
+        width: calc(100% - 25px);
+    }
+    .assign-three .two,
+    .assign-three .three {
+        width: calc(50% - 20px);
+    }
+}
