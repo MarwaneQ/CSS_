@@ -126,7 +126,7 @@ hr {
 .grid3 {
   display: grid;
   margin: 0 auto;
-  background-color: #ddd;
+  background-color: #ccc;
   padding: 20px;
   width: 800px;
   height: 400px;
@@ -135,9 +135,9 @@ hr {
   gap: 20px;
 }
 .grid3 div {
-  background-color: #2296f3;
+  background-color: #2296f4;
   display: flex;
-  justify-content: center;
+  justify-content: centet;
   align-items: center;
   color: white;
 }
